@@ -219,8 +219,7 @@ async def list_words(update: Update, context: CallbackContext):
     
     conn = sqlite3.connect(db_name)
     c = conn.cursor()
-    c.execute("""
-            SELECT g.name, w.foreign_word, w.russian_word
+    c.execute(""" SELECT g.name, w.foreign_word, w.russian_word
             FROM Groups g
             LEFT JOIN Words w ON g.id = w.group_id
             WHERE g.user_id = ?

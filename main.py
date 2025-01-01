@@ -81,13 +81,6 @@ async def start(update: Update, context: CallbackContext):
     reply_markup = ReplyKeyboardMarkup(keyboard, resize_keyboard=True)
     await update.message.reply_text(f"Привет, {username}! Добро пожаловать в Полиглотик 📚 Чем займемся?", reply_markup=reply_markup)
 
-@app.route('/webhook', methods=['POST'])
-def webhook():
-    """Обработка сообщений от Telegram через вебхук"""
-    json_str = request.get_data(as_text=True)
-    update = Update.de_json(json_str, application.bot)
-    application.update_queue.put(update)
-    return 'ok', 200
 
 # Команда для возврата В меню✨
 async def menu(update: Update, context: CallbackContext):

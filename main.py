@@ -49,10 +49,6 @@ def init_db(user_id):
     conn.commit()
     conn.close()
 
-app = Flask(__name__)
-
-# Telegram token
-TELEGRAM_TOKEN = os.getenv('7639355211:AAHqvApb68wTrdSZEiYAuwkbU8udtVWpleM')
 
 def get_user_db(user_id):
     db_name = 'polyglotik.db'

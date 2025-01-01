@@ -5,7 +5,6 @@ from telegram.ext import Application, CommandHandler, MessageHandler, filters, C
 import sqlite3
 from telegram import Update, ReplyKeyboardMarkup, KeyboardButton, ReplyKeyboardRemove
 from telegram.ext import Application, CommandHandler, MessageHandler, filters, ConversationHandler, CallbackContext, CallbackQueryHandler
-from flask import Flask, request
 import os
 import asyncio
 
